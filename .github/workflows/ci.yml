@@ -10,6 +10,7 @@ jobs:
       - run: |
          echo "${{github.event.pull_request.head.sha}}"
          echo "${{github.event.pull_request.number}}"
+         echo $GITHUB_REPOSITORY
          
       - name: Auto merge
         run: |
