@@ -7,6 +7,9 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:   
-      - run: echo "${{ toJSON(github.event.pull_request) }}"
+      - run: |
+         echo "${{github.event.pull_request.head.sha}}"
+         echo "${{github.event.pull_request.number}}"
+         
 
 
